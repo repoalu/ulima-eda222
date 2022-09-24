@@ -1,0 +1,27 @@
+A)
+T(n): Los bucles son independientes. Basicamente debemos multiplicar la cantidad
+de veces que se va a ejecutar.
+
+Primer Bucle: n^2 veces
+Segundo Bucle: n-1 veces
+Tercer Bucle: Valores posibles son 0, 2, 4, 6, 8, ..., 198 -> 100 veces
+
+Por lo tanto, T(n) = 100n^2 (n-1) = 100n^3-100n
+Complejidad: O(n^3)
+
+B)
+Los 2 primeros bucles se encuentran conectados
+Para i = 1, j = 1, 2, 3, 4, ..., n -> n veces
+Para i = 2, j = 2, 3, 4, 5, ..., n -> n-1 veces
+...
+Para i = n, j = n -> 1 vez
+
+Por lo tanto, la cantidad de veces que se ejecutara el bucle interior sera
+1 + 2 + 3 + ... + n = n (n+1) / 2
+
+Sin embargo, todavía hay un bucle más en el interior, que se ejecutara 3n
+veces (desde 1 hasta 3n)
+
+Luego, T(n) = 3n (n) (n+1) / 2 = 3n^2 (n+1) / 2=  1/2 (3n^3+3n^2)
+Complejidad: O(n^3)
+
