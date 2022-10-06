@@ -1,38 +1,41 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package edu.ulima.eda.guias.g05;
 
 import edu.ulima.eda.listas.LinkedList;
 import edu.ulima.eda.listas.Node;
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 /**
  *
- * @author jc
+ * @author JC
  */
-public class Prob01 {
-    
-    public static int countElements(LinkedList list){
+
+class ListP01 extends LinkedList{
+    public int size(){
         int count = 0;
-        //Crear nodo auxiliar y asignar al primer elemento de la lista
-        Node ptr = list.getL();
+        Node ptr = this.getL();
         while(ptr != null){
             count = count + 1;
             ptr = ptr.next();
-        }
+        }        
         return count;
     }
-    
-    public static void main(String[] args){
-        LinkedList list = new LinkedList();
-        list.addLast(12);
-        list.addLast(20);
-        list.addLast(35);
-        list.addLast(50);
-        list.addLast(66);
+}
+
+public class Prob01 {    
+    public static void main(String[] args){        
+        ListP01 list = new ListP01();
+        list.addLast(10);
+        list.addLast(344);
+        list.addLast(80);
+        list.addLast(33);
+        list.addLast(77);
         list.showElements();
-        
-        System.out.println("Cantidad de elementos: " + countElements(list));
-    }
+        System.out.println(list.size());
+    }           
+
 }
