@@ -19,7 +19,7 @@ public class Prob02 {
         }else{
             return x * pow(x, n - 1);
         }
-    }
+    } 
     
     public static void main(String[] args){
         System.out.println(pow(4, 3));
